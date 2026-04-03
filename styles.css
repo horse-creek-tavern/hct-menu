@@ -162,19 +162,28 @@ h2 {
 .dropdown-card summary {
   list-style: none;
   cursor: pointer;
+  top: 5.5rem;
+  position: sticky;
+  z-index: 10;
   min-height: 5.6rem;
   padding: 1rem 1.5rem 1rem 1.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: transparent;
+  background: var(--white);
   color: var(--black);
   font-family: var(--condensed);
   font-size: clamp(2rem, 8vw, 2.85rem);
   line-height: 0.98;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  border-bottom: 0;
+}
+
+.dropdown-card[open] summary {
+  border-left: 0.45rem solid var(--brand-orange);
+  box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.28);
 }
 
 .dropdown-card summary::-webkit-details-marker {
@@ -199,9 +208,10 @@ h2 {
 }
 
 .dropdown-body {
-  padding: 0 1.5rem 1.35rem 1.6rem;
+  padding: 0.85rem 1.5rem 1.35rem 1.6rem;
   background: transparent;
 }
+
 
 .menu-items {
   display: grid;
@@ -233,6 +243,11 @@ h2 {
   line-height: 1.2;
 }
 
+.menu-item h4 {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
 .menu-price {
   flex: 0 0 auto;
   color: var(--black);
@@ -253,6 +268,11 @@ h2 {
   margin: 0.3rem 0 0;
   font-size: 1.15rem;
   line-height: 1.45;
+}
+
+.menu-item-subline {
+  color: var(--ink-soft);
+  font-size: 1rem;
 }
 
 .menu-item-note {
@@ -390,13 +410,134 @@ h2 {
 
 .feature-menu-note p {
   margin: 0;
-  color: #6d5747;
+  color: var(--ink-soft);
   font-size: 0.9rem;
   line-height: 1.45;
 }
 
 .feature-menu-note p + p {
   margin-top: 0.15rem;
+}
+
+.section-support-note {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 0.5;
+  text-align: center;
+}
+
+.sides-support-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 0.5;
+  text-align: center;
+}
+
+.menu-sides-box {
+  padding: 0.95rem 1rem;
+  background: linear-gradient(180deg, var(--brand-orange) 0%, var(--brand-orange-deep) 100%);
+}
+
+.menu-sides-box h3,
+.burger-builder-box h3 {
+  margin: 0;
+  margin-bottom: 0.7rem;
+  color: var(--white);
+  font-family: var(--condensed);
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu-sides-box h3 {
+  padding-bottom: 0.55rem;
+  border-bottom: 1.2px solid var(--white);
+}
+
+.menu-sides-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem 0.8rem;
+  color: var(--white);
+  font-weight: 600;
+  text-align: center;
+}
+
+.burger-builder-box {
+  margin-top: 0.85rem;
+  padding: 0.25rem 0 0;
+  background: transparent;
+}
+
+.burger-builder-note {
+  margin: 0;
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.burger-builder-groups {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.burger-builder-group {
+  padding: 0;
+  background: var(--brand-orange);
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-builder-group h4 {
+  margin: 0;
+  padding: 0.45rem 0.3rem 0.4rem;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding-bottom: 0.55rem;
+  border-bottom: 1.2px solid var(--white);
+}
+
+.burger-builder-group .flavor-list {
+  padding: 0.45rem 0.3rem 0.55rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.18;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.burger-builder-group .flavor-list li {
+  margin: 0;
+}
+
+.burger-builder-box h3 {
+  margin: 0 0 0.35rem;
+  color: var(--black);
+  font-family: var(--condensed);
+  font-size: 1.7rem;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .placeholder-slot {
@@ -426,6 +567,10 @@ h2 {
 
   .wing-flavor-group-signature {
     margin: 0;
+  }
+
+  .menu-sides-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .top-header {
