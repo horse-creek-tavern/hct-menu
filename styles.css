@@ -182,7 +182,7 @@ h2 {
 }
 
 .dropdown-card[open] summary {
-  border-left: 0.45rem solid var(--brand-orange);
+  border-left: 0.40rem solid var(--brand-orange);
   box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.28);
 }
 
@@ -422,7 +422,7 @@ h2 {
 .section-support-note {
   margin: 0;
   color: var(--ink);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   line-height: 0.5;
   text-align: center;
@@ -478,7 +478,7 @@ h2 {
 .burger-builder-note {
   margin: 0;
   color: var(--black);
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   text-align: center;
 }
@@ -502,7 +502,7 @@ h2 {
   padding: 0.45rem 0.3rem 0.4rem;
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
