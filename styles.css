@@ -469,6 +469,17 @@ h2 {
   text-align: center;
 }
 
+.menu-dressings-grid {
+  align-items: stretch;
+}
+
+.menu-dressings-grid span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.1rem;
+}
+
 .burger-builder-box {
   margin-top: 0.85rem;
   padding: 0.25rem 0 0;
