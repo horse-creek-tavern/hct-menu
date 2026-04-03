@@ -182,7 +182,7 @@ h2 {
 }
 
 .dropdown-card[open] summary {
-  border-left: 0.40rem solid var(--brand-orange);
+  border-left: 0.42rem solid var(--brand-orange);
   box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.28);
 }
 
